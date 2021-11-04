@@ -11,11 +11,6 @@ class HomeController extends Controller
 
         $journeys = journey::all();
 
-        
-        $data = [
-            "journeys" => $journeys
-        ];
-
-        return view("home", $data);
+        return view("home", compact("journeys"));
     }
 }
